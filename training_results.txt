@@ -1,0 +1,71 @@
+MODEL ARCHITECTURE:
+--------------------
+Total Parameters: 136,141,888
+Trainable Parameters: 13,653,504
+Number of Clusters: 5
+Feature Dimension: 512
+Latent Dimension: 256
+
+TRAINING SUMMARY:
+--------------------
+Initial Training Loss: -0.2785
+Final Training Loss: -5.9157
+Loss Reduction: 5.6373
+Initial Validation Silhouette: -1.0000
+Final Validation Silhouette: -1.0000
+Best Validation Silhouette: 0.5057
+Total Epochs: 30
+
+CLUSTERING PERFORMANCE:
+-------------------------
+Silhouette Score: 0.5057
+Unique Clusters Found: 2/5
+Cluster Usage Rate: 40.00%
+Average Confidence: 0.2103
+
+CLUSTER DISTRIBUTION:
+---------------------
+Cluster 0: 246 samples (3.0%)
+Cluster 4: 7845 samples (97.0%)
+
+UNCERTAINTY ANALYSIS:
+---------------------
+Mean Uncertainty: 0.7897
+Std Uncertainty: 0.0002
+High Confidence Samples (>0.9): 0 (0.0%)
+Low Confidence Samples (<0.5): 8091 (100.0%)
+Uncertain Samples (uncertainty >0.5): 8091 (100.0%)
+
+TOP 10 MOST UNCERTAIN SAMPLES:
+--------------------------------
+Rank 1: Sample 7154, Uncertainty: 0.7902, Cluster: 0
+Rank 2: Sample 2083, Uncertainty: 0.7902, Cluster: 0
+Rank 3: Sample 7358, Uncertainty: 0.7902, Cluster: 0
+Rank 4: Sample 4639, Uncertainty: 0.7902, Cluster: 0
+Rank 5: Sample 4704, Uncertainty: 0.7902, Cluster: 0
+Rank 6: Sample 2127, Uncertainty: 0.7902, Cluster: 0
+Rank 7: Sample 6971, Uncertainty: 0.7902, Cluster: 0
+Rank 8: Sample 7691, Uncertainty: 0.7902, Cluster: 0
+Rank 9: Sample 1006, Uncertainty: 0.7902, Cluster: 4
+Rank 10: Sample 50, Uncertainty: 0.7902, Cluster: 0
+
+MODEL CONFIGURATION:
+---------------------
+Architecture: Bayesian Deep Clustering Network
+Visual Encoder: ResNet-50 (pre-trained)
+Text Encoder: BERT-base-uncased
+Fusion Strategy: Concatenation + MLP
+Embedding Type: Stochastic (Variational)
+Clustering Method: Distance-based soft assignment
+Uncertainty Type: Epistemic + Aleatoric
+
+GENERATED FILES:
+----------------
+- best_model.pth: Trained model weights
+- embeddings.npy: Learned multimodal embeddings
+- cluster_assignments.npy: Hard cluster labels
+- cluster_probs.npy: Soft assignment probabilities
+- clustering_results.png: t-SNE visualization
+- training_results.txt: This comprehensive report
+
+
